@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{%block head %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/get_idea.css') }}">
+{% endblock %}
+
+{% block title %}Get idea{% endblock %}
+{% block content %}
+<div class="container">
+    {% for idea, color in ideas %}
+    <div class="box" style="background-color: {{ color }};">
+        <h2>{{ idea[0] }}</h2>
+        <p>{{ idea[1] }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

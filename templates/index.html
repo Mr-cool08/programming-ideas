@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{%block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}">
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="hero">
+    <h1>Welcome to Programming Ideas</h1>
+    <p>Discover and share programming project ideas with the community</p>
+</div>
+
+<div class="features-container">
+    <div class="feature-box">
+        <i class="fa fa-lightbulb-o"></i>
+        <h2>Get Ideas</h2>
+        <p>Browse through countless programming project ideas shared by the community</p>
+        <a href="/get" class="feature-button">Browse Ideas</a>
+    </div>
+    
+    <div class="feature-box">
+        <i class="fa fa-pencil"></i>
+        <h2>Share Ideas</h2>
+        <p>Contribute your own programming project ideas to help others</p>
+        <a href="/write" class="feature-button">Share Idea</a>
+    </div>
+</div>
+{% endblock %}
