@@ -86,4 +86,4 @@ def write():
 if __name__ == '__main__':
     create_datase()
     migrate_database()
-    app.run(debug=False, host='0.0.0.0' port=port)
+    app.run(debug=False, host='0.0.0.0', port=port)
