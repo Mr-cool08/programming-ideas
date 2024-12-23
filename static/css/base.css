@@ -35,3 +35,33 @@ ul {
   .active {
     background-color: rgb(37, 37, 37);
   }
+
+.error-box {
+    background-color: #292929;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 100px;
+    max-width: 500px;
+    width: 90%;
+}
+
+.error-box h1 {
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+}
+
+.back-btn:hover {
+    background-color: #45a049;
+}

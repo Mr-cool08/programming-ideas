@@ -1,1 +1,12 @@
-do stuff here
+{% extends "base.html" %}
+{% block title %}Error{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="error-box">
+        <h1>Oops!</h1>
+        <p>{{ message }}</p>
+        <a href="/" class="back-btn">Back to Home</a>
+    </div>
+</div>
+{% endblock %}

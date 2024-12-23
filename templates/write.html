@@ -1,20 +1,37 @@
 {% extends "base.html" %}
 {%block head %}
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/write.css') }}">
-
 {% endblock %}
-
 
 {% block title %}Write an idea{% endblock %}
 {% block content %}
-<div class="box">
-<form action="/write" method="post">
-    <label for="name">Idea name:</label>
-    <input type="text" id="name" name="name" placeholder="Idea title"><br><br>
-    <label for="content">Idea content:</label>
-
-    <textarea name="content" rows="3" cols="125" placeholder="Idea content here"> </textarea>
-    <input type="submit" value="Submit">
-  </form>
+<div class="container">
+    <div class="write-box">
+        <h1>Share Your Programming Idea</h1>
+        <p class="subtitle">Help others by sharing your project idea with the community</p>
+        <form action="/write" method="post">
+            <div class="form-group">
+                <label for="name">Title</label>
+                <input type="text" id="name" name="name" placeholder="Enter your idea title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="content">Description</label>
+                <textarea name="content" id="content" rows="6" placeholder="Describe your programming idea in detail" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="difficulty">Difficulty Level</label>
+                <select name="difficulty" id="difficulty" required>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                    <option value="Expert">Expert</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="submit-btn">Share Idea</button>
+        </form>
+    </div>
 </div>
 {% endblock %}

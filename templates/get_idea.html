@@ -3,13 +3,21 @@
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/get_idea.css') }}">
 {% endblock %}
 
-{% block title %}Get idea{% endblock %}
+{% block title %}Programming Ideas{% endblock %}
 {% block content %}
+<div class="page-header">
+    <h1>Programming Project Ideas</h1>
+    <p>Browse through community-shared programming ideas</p>
+</div>
 <div class="container">
     {% for idea, color in ideas %}
     <div class="box" style="background-color: {{ color }};">
+        <span class="date">{{ idea[2].split()[0] }}</span>
         <h2>{{ idea[0] }}</h2>
         <p>{{ idea[1] }}</p>
+        <div class="box-footer">
+            <span class="difficulty {{ idea[3]|lower }}">{{ idea[3] }}</span>
+        </div>
     </div>
     {% endfor %}
 </div>
