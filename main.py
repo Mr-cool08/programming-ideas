@@ -3,7 +3,7 @@ import sqlite3
 import random
 from datetime import datetime
 import os
-
+port=80
 app = Flask(__name__)
 app.secret_key = 'the random string'
 
@@ -86,4 +86,4 @@ def write():
 if __name__ == '__main__':
     create_datase()
     migrate_database()
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0' port=port)
